@@ -3,9 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 Route::get('/', [TodoController::class, 'index'])->name('todo');
 Route::post('/', [TodoController::class, 'store'])->name('todo.post');
